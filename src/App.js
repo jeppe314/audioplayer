@@ -1,6 +1,7 @@
 import "./App.css"
 import { useState, useRef, useEffect } from "react"
 import Player from "./player/Player"
+import SongImage from "./SongImage"
 import { songsData } from "./player/songsData"
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <audio src={currentSong.url} ref={audioEl} onTimeUpdate={() => playing()} />
+      <SongImage />
       <Player
         songs={songs}
         setSongs={setSongs}
